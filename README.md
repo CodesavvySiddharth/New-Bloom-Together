@@ -2,7 +2,7 @@
 Embracing Parenthood with Joyful Journeys  
 ## Overview
 
-Welcome to Nurture Nest, your go-to platform for parenting and pregnancy advice with a focus on mental health. Nurture Nest offers a variety of features to support expecting and current parents on their journey. From expert advice to interactive resources, we've got you covered.
+Welcome to Bloom Together, your go-to platform for parenting and pregnancy advice with a focus on mental health. Bloom Together offers a variety of features to support expecting and current parents on their journey. From expert advice to interactive resources, we've got you covered.
 
 ## Features
 
@@ -53,4 +53,4 @@ To start your journey with Nurture Nest, simply sign up on our platform and expl
 
 This project is part of the code kshetra Hackathon, contributing towards the goals of Sustainable Development Goal 3 (SDG-3) - "Good Health and Well-being."
 
-Thank you for choosing Nurture Nest as your parenting companion. We're excited to be part of your parenting journey!
+Thank you for choosing Bloom together as your parenting companion. We're excited to be part of your parenting journey!

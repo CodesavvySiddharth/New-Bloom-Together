@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
-    "dev": "nodemon -e js,hbs src",
-    "build": "npm install --production"
+    "dev": "nodemon -e js,hbs src"
   },
   "keywords": [],
   "author": "Codesavvy",

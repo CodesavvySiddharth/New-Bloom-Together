@@ -2,7 +2,7 @@
 Embracing Parenthood with Joyful Journeys  
 ## Overview
 
-Welcome to Bloom Together, your go-to platform for parenting and pregnancy advice with a focus on mental health. Bloom Together offers a variety of features to support expecting and current parents on their journey. From expert advice to interactive resources, we've got you covered.
+Welcome to Bloom Together, your go-to platform for parenting and pregnancy advice with a focus on mental health. Bloom Together offers a variety of features to support expecting and current parents on their journey. From expert advice to interactive resources, we've got you covered.Navigating pregnancy can be challenging, and we ensure it’s smooth and stress-free by providing the right diet and yoga guidance to prevent critical conditions. For LGBTQ+ parents, we offer expert-backed parental care resources to foster healthy growth and deep emotional bonds with their children. Our mission is to empower every parent with the tools they need for a safe, loving, and inclusive journey.
 
 ## Features
 

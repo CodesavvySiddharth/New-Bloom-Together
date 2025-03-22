@@ -391,12 +391,27 @@ if (logoutButton) {
 <a href="#" class="scrollup" id="scroll-up">
   <i class="ri-arrow-up-line"></i>
 </a>
-
+// ... existing code ...
 <!--=============== CHAT-BOT ==========-->
-
-
 <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2025/02/21/07/20250221073807-AEF51ZCD.js"></script>
+<script>
+  window.addEventListener('load', function() {
+    try {
+      const script = document.createElement('script');
+      script.src = "https://files.bpcontent.cloud/2025/02/21/07/20250221073807-AEF51ZCD.js";
+      script.onerror = function() {
+        console.error('Failed to load Botpress chat configuration');
+      };
+      script.onload = function() {
+        console.log('Botpress chat loaded successfully');
+      };
+      document.body.appendChild(script);
+    } catch(error) {
+      console.error('Error initializing chat:', error);
+    }
+  });
+</script>
+
 
 </body>
 </html>

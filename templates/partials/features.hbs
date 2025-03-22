@@ -1,41 +1,38 @@
    <!--==================== FEATURED ====================-->
     <section class="featured section" id="featured">
         <h2 class="section__title">Resources</h2>
+        <p class="section__subtitle">Essential guides and materials for new and expecting parents</p>
   
         <div class="featured__container container">
         
           <div class="featured__swiper swiper">
             <div class="swiper-wrapper">
               <article class="featured__card swiper-slide">
-                <img
-                  src="img/book1-img.jpg"
-                  alt="image"
-                  class="featured__img"
-                />
+                <div class="book-img-container">
+                  <img
+                    src="img/book1-img.jpg"
+                    alt="What and When Guide"
+                    class="featured__img"
+                  />
+                  <div class="book-tag">Baby Care</div>
+                </div>
   
                 <h2 class="featured__title">What and When</h2>
                 <div class="featured__prices">
                   <span class="featured__discount">The All in-one-Guide </span>
                 </div>
+                
+                <p class="book-description">
+                  A comprehensive guide covering all aspects of baby care from birth through the first year.
+                </p>
   
-                 <!-- Add an event listener to the button -->
-  <button class="button" id="readpdf1">Read Me</button>
+                <div class="book-info">
+                  <span><i class="fas fa-book"></i> 120 pages</span>
+                  <span><i class="fas fa-star"></i> 4.8/5</span>
+                </div>
   
-  <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          // Find the button by its ID
-          var readPdfButton = document.getElementById('readpdf1');
-  
-          // Attach click event listener to the button
-          readPdfButton.addEventListener('click', function() {
-              // Replace 'path_to_your_pdf_file.pdf' with the actual path to your PDF file
-              var pdfUrl = 'PDFs/ww.pdf';
-  
-              // Open PDF in a new window
-              window.open(pdfUrl, '_blank');
-          });
-      });
-  </script>
+                <!-- Add an event listener to the button -->
+                <button class="pdf-button" id="readpdf1">Read PDF</button>
   
                 <div class="featured__actions">
                   <button><i class="ri-search-line"></i></button>
@@ -45,60 +42,64 @@
               </article>
   
               <article class="featured__card swiper-slide">
-                <img
-                  src="img/book2-img.jpg"
-                  alt="image"
-                  class="featured__img"
-                />
+                <div class="book-img-container">
+                  <img
+                    src="img/book2-img.jpg"
+                    alt="No-Cry Baby Sleeping Solution"
+                    class="featured__img"
+                  />
+                  <div class="book-tag">Sleep</div>
+                </div>
   
                 <h2 class="featured__title">The No-Cry</h2>
                 <div class="featured__prices">
                   <span class="featured__discount">Baby Sleeping Solution</span>
                 </div>
+                
+                <p class="book-description">
+                  Gentle, effective strategies to help your baby sleep through the night without tears.
+                </p>
+  
+                <div class="book-info">
+                  <span><i class="fas fa-book"></i> 86 pages</span>
+                  <span><i class="fas fa-star"></i> 4.7/5</span>
+                </div>
+
+                <button class="pdf-button" id="readpdf2">Read PDF</button>
 
                 <div class="featured__actions">
                   <button><i class="ri-search-line"></i></button>
                   <button><i class="ri-heart-3-line"></i></button>
                   <button><i class="ri-eye-line"></i></button>
                 </div>
-                
-         
-                 <!-- Add an event listener to the button -->
-      <button class="button" id="readpdf2">Read Me</button>
-  </article>
-  
-  <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          // Find the button by its ID
-          var readPdfButton = document.getElementById('readpdf2');
-  
-          // Attach click event listener to the button
-          readPdfButton.addEventListener('click', function() {
-              // Replace 'path_to_your_pdf_file.pdf' with the actual path to your PDF file
-              var pdfUrl = 'PDFs/The_no_Cry_Sleep_Solution_pdf_compressed.pdf';
-  
-              // Open PDF in a new window
-              window.open(pdfUrl, '_blank');
-          });
-      });
-  </script>
-
-              
               </article>
   
               <article class="featured__card swiper-slide">
-                <img
-                  src="img/book3-img.jpg"
-                  alt="image"
-                  class="featured__img"
-                />
+                <div class="book-img-container">
+                  <img
+                    src="img/book3-img.jpg"
+                    alt="Cribsheet Guide"
+                    class="featured__img"
+                  />
+                  <div class="book-tag">Evidence-Based</div>
+                </div>
   
                 <h2 class="featured__title">Cribsheet</h2>
                 <div class="featured__prices">
                   <span class="featured__discount">A Data-Drive Guide</span>
                 </div>
+                
+                <p class="book-description">
+                  Research-backed advice that cuts through the confusion of parenting in the information age.
+                </p>
   
-                <button class="button" id="readpdf3">Read Me</button>
+                <div class="book-info">
+                  <span><i class="fas fa-book"></i> 104 pages</span>
+                  <span><i class="fas fa-star"></i> 4.9/5</span>
+                </div>
+  
+                <button class="pdf-button" id="readpdf3">Read PDF</button>
+
                 <div class="featured__actions">
                   <button><i class="ri-search-line"></i></button>
                   <button><i class="ri-heart-3-line"></i></button>
@@ -107,26 +108,133 @@
               </article>
   
               <article class="featured__card swiper-slide">
-                <img
-                  src="img/book4-img.jpg"
-                  alt="image"
-                  class="featured__img"
-                />
+                <div class="book-img-container">
+                  <img
+                    src="img/book4-img.jpg"
+                    alt="The Happiest Baby Guide"
+                    class="featured__img"
+                  />
+                  <div class="book-tag">Newborn Care</div>
+                </div>
   
                 <h2 class="featured__title">The Happiest Baby</h2>
                 <div class="featured__prices">
                   <span class="featured__discount">The New Way to Calm Crying</span>
-                  
+                </div>
+                
+                <p class="book-description">
+                  Revolutionary techniques to soothe fussy babies and help them sleep longer.
+                </p>
+  
+                <div class="book-info">
+                  <span><i class="fas fa-book"></i> 92 pages</span>
+                  <span><i class="fas fa-star"></i> 4.8/5</span>
                 </div>
   
-                <button class="button" id="readpdf4">Read Me</button>
+                <button class="pdf-button" id="readpdf4">Read PDF</button>
+
                 <div class="featured__actions">
                   <button><i class="ri-search-line"></i></button>
                   <button><i class="ri-heart-3-line"></i></button>
                   <button><i class="ri-eye-line"></i></button>
                 </div>
               </article>
+
+              <article class="featured__card swiper-slide">
+                <div class="book-img-container">
+                  <img
+                    src="img/exercise3.jpg"
+                    alt="Pregnancy Nutrition Guide"
+                    class="featured__img"
+                  />
+                  <div class="book-tag">Nutrition</div>
+                </div>
+  
+                <h2 class="featured__title">Pregnancy Nutrition</h2>
+                <div class="featured__prices">
+                  <span class="featured__discount">Eating for Two</span>
+                </div>
+                
+                <p class="book-description">
+                  Complete nutritional guidance for a healthy pregnancy and optimal fetal development.
+                </p>
+  
+                <div class="book-info">
+                  <span><i class="fas fa-book"></i> 78 pages</span>
+                  <span><i class="fas fa-star"></i> 4.6/5</span>
+                </div>
+  
+                <button class="pdf-button" id="readpdf5">Read PDF</button>
+
+                <div class="featured__actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+
+              <article class="featured__card swiper-slide">
+                <div class="book-img-container">
+                  <img
+                    src="img/exercise1.jpg"
+                    alt="Breastfeeding Guide"
+                    class="featured__img"
+                  />
+                  <div class="book-tag">Breastfeeding</div>
+                </div>
+  
+                <h2 class="featured__title">Breastfeeding Guide</h2>
+                <div class="featured__prices">
+                  <span class="featured__discount">Essential Tips for New Mothers</span>
+                </div>
+                
+                <p class="book-description">
+                  Practical advice and support for successful breastfeeding from day one.
+                </p>
+  
+                <div class="book-info">
+                  <span><i class="fas fa-book"></i> 64 pages</span>
+                  <span><i class="fas fa-star"></i> 4.7/5</span>
+                </div>
+  
+                <button class="pdf-button" id="readpdf6">Read PDF</button>
+                
+                <div class="featured__actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+
             </div>
+  
+            <!-- Consolidated script to handle all PDF buttons -->
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                // Create an array of button IDs and their corresponding PDF paths
+                const pdfButtons = [
+                  { id: 'readpdf1', path: 'PDFs/ww.pdf' },
+                  { id: 'readpdf2', path: 'PDFs/cry.pdf' },
+                  { id: 'readpdf3', path: 'PDFs/cribsheet.pdf' },
+                  { id: 'readpdf4', path: 'PDFs/thb.pdf' },
+                  { id: 'readpdf5', path: 'PDFs/ww.pdf' },
+                  { id: 'readpdf6', path: 'PDFs/cry.pdf' }
+                ];
+                
+                // Iterate through each button and attach event listener
+                pdfButtons.forEach(function(button) {
+                  const buttonElement = document.getElementById(button.id);
+                  if (buttonElement) {
+                    buttonElement.addEventListener('click', function() {
+                      console.log('Button clicked: ' + button.id + ', Opening PDF: ' + button.path);
+                      window.open(button.path, '_blank');
+                    });
+                  } else {
+                    console.error('Button not found: ' + button.id);
+                  }
+                });
+              });
+            </script>
   
             <div class="swiper-button-prev">
               <i class="ri-arrow-left-s-line"></i>
@@ -137,132 +245,619 @@
           </div>
         </div>
   
-  
+        <!-- Add book card styling -->
+        <style>
+          /* Book Card Styling */
+          .featured__card {
+            background: var(--container-color);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding-bottom: 20px;
+            margin: 15px 5px;
+            position: relative;
+            border: 2px solid var(--border-color);
+          }
+          
+          .featured__card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+          }
+          
+          /* Book Image Container */
+          .book-img-container {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+          }
+          
+          .featured__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+          }
+          
+          .featured__card:hover .featured__img {
+            transform: scale(1.1);
+          }
+          
+          /* Book Tag */
+          .book-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(45deg, #ff6b8b, #ff4081);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          }
+          
+          /* Book Title */
+          .featured__title {
+            font-size: 18px;
+            font-weight: 600;
+            padding: 0 15px;
+            margin: 15px 0 5px;
+            color: #333;
+            text-align: center;
+          }
+          
+          /* Book Subtitle */
+          .featured__prices {
+            text-align: center;
+            margin-bottom: 10px;
+          }
+          
+          .featured__discount {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+          }
+          
+          /* Book Description */
+          .book-description {
+            font-size: 14px;
+            color: #666;
+            padding: 0 15px;
+            margin-bottom: 15px;
+            height: 60px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-align: center;
+          }
+          
+          /* Book Info */
+          .book-info {
+            display: flex;
+            justify-content: space-around;
+            padding: 0 15px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #777;
+          }
+          
+          .book-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+          }
+          
+          .book-info i {
+            color: #ff4081;
+          }
+          
+          /* PDF Button */
+          .pdf-button {
+            background: linear-gradient(45deg, #ff6b8b, #ff4081);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-weight: var(--font-semi-bold);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            width: 80%;
+            margin: 0 auto 15px;
+            box-shadow: 0 4px 10px rgba(255,75,107,0.3);
+          }
+          
+          .pdf-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(255,75,107,0.4);
+          }
+          
+          .pdf-button:active {
+            transform: translateY(-1px);
+          }
+          
+          /* Actions */
+          .featured__actions {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+          }
+          
+          .featured__actions button {
+            background-color: var(--container-color);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+          }
+          
+          .featured__actions button:hover {
+            background-color: var(--border-color);
+            transform: translateY(-2px);
+          }
+          
+          .featured__actions i {
+            color: #ff4081;
+            font-size: 16px;
+          }
+          
+          /* Responsive Adjustments */
+          @media (max-width: 768px) {
+            .book-img-container {
+              height: 160px;
+            }
+            
+            .featured__title {
+              font-size: 16px;
+            }
+            
+            .book-description {
+              font-size: 13px;
+              height: 55px;
+            }
+          }
+        </style>
+
   <div class="featured__container container">
-      <h3 class="section__title">Recipes</h3>
+      <h3 class="section__title">Healthy Recipes</h3>
+      <p class="section__subtitle">Nutritious and delicious meals for expecting and new parents</p>
       <div class="testimonial__container container">
         <div class="testimonial__swiper swiper">
           <div class="swiper-wrapper">
   
-            <article class="testimonial__card swiper-slide">
-              <img
-                src="img/recipe-img-01.jpg"
-                alt="image"
-                class="testimonial__img"
-              />
+            <article class="testimonial__cards swiper-slide">
+              <div class="recipe-img-container">
+                <img
+                  src="img/recipe-img-01.jpg"
+                  alt="Grilled Chicken"
+                  class="testimonial__img"
+                />
+                <div class="recipe-tag">High Protein</div>
+              </div>
   
-              <h2 class="testimonial__title">Grilled Chicken with Farro & Roasted
-                Cauliflower</h2>
+              <h2 class="testimonial__title">Grilled Chicken with Farro & Roasted Cauliflower</h2>
               <p class="testimonial__description">
-                Serve the chicken over the farro and vegetables. Sprinkle with
-                mint and pine nuts. Serve with lemon wedges, if desired.
+                Protein-rich dish perfect for pregnancy. Packed with nutrients and easy to prepare.
               </p>
   
-              <div class="testimonial__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
+              <div class="recipe-info">
+                <span><i class="fas fa-clock"></i> 30 mins</span>
+                <span><i class="fas fa-fire"></i> 420 cal</span>
+                <span><i class="fas fa-leaf"></i> Healthy</span>
               </div>
+  
+              <div class="testimonial__stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span class="rating-count">(42)</span>
+              </div>
+              
+              <button class="recipe-button">View Recipe</button>
             </article>
   
-            <article class="testimonial__card swiper-slide">
-              <img
-                src="img/recipe2.jpg"
-                alt="image"
-                class="testimonial__img"
-              />
+            <article class="testimonial__cards swiper-slide">
+              <div class="recipe-img-container">
+                <img
+                  src="img/recipe2.jpg"
+                  alt="Salmon"
+                  class="testimonial__img"
+                />
+                <div class="recipe-tag">Omega-3</div>
+              </div>
   
-              <h2 class="testimonial__title">Grilled Chicken with Farro & Roasted
-                Cauliflower</h2>
+              <h2 class="testimonial__title">Baked Salmon with Asparagus</h2>
               <p class="testimonial__description">
-                Serve the chicken over the farro and vegetables. Sprinkle with
-                mint and pine nuts. Serve with lemon wedges, if desired.
+                Rich in omega-3 fatty acids essential for baby's brain development. Simple and flavorful.
               </p>
   
-              <div class="testimonial__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
+              <div class="recipe-info">
+                <span><i class="fas fa-clock"></i> 25 mins</span>
+                <span><i class="fas fa-fire"></i> 380 cal</span>
+                <span><i class="fas fa-leaf"></i> Gluten-Free</span>
               </div>
+  
+              <div class="testimonial__stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span class="rating-count">(56)</span>
+              </div>
+              
+              <button class="recipe-button">View Recipe</button>
             </article>
   
-            <article class="testimonial__card swiper-slide">
-              <img
-                src="img/recipe3.jpg"
-                alt="image"
-                class="testimonial__img"
-              />
+            <article class="testimonial__cards swiper-slide">
+              <div class="recipe-img-container">
+                <img
+                  src="img/recipe3.jpg"
+                  alt="Spinach Salad"
+                  class="testimonial__img"
+                />
+                <div class="recipe-tag">Iron-Rich</div>
+              </div>
   
-              <h2 class="testimonial__title">Grilled Chicken with Farro & Roasted
-                Cauliflower</h2>
+              <h2 class="testimonial__title">Spinach & Berry Salad with Walnuts</h2>
               <p class="testimonial__description">
-                Serve the chicken over the farro and vegetables. Sprinkle with
-                mint and pine nuts. Serve with lemon wedges, if desired.
+                Iron-rich spinach with antioxidant berries and brain-boosting walnuts. Perfect pregnancy salad.
               </p>
   
-              <div class="testimonial__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
+              <div class="recipe-info">
+                <span><i class="fas fa-clock"></i> 15 mins</span>
+                <span><i class="fas fa-fire"></i> 290 cal</span>
+                <span><i class="fas fa-leaf"></i> Vegetarian</span>
               </div>
+  
+              <div class="testimonial__stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span class="rating-count">(38)</span>
+              </div>
+              
+              <button class="recipe-button">View Recipe</button>
             </article>
   
-            <article class="testimonial__card swiper-slide">
-              <img
-                src="img/recipe4.jpg"
-                alt="image"
-                class="testimonial__img"
-              />
+            <article class="testimonial__cards swiper-slide">
+              <div class="recipe-img-container">
+                <img
+                  src="img/recipe4.jpg"
+                  alt="Quinoa Bowl"
+                  class="testimonial__img"
+                />
+                <div class="recipe-tag">High Fiber</div>
+              </div>
   
-              <h2 class="testimonial__title">Grilled Chicken with Farro & Roasted
-                Cauliflower</h2>
+              <h2 class="testimonial__title">Mediterranean Quinoa Bowl</h2>
               <p class="testimonial__description">
-                Serve the chicken over the farro and vegetables. Sprinkle with
-                mint and pine nuts. Serve with lemon wedges, if desired.
+                Fiber-rich quinoa with vegetables and feta. Helps with digestion during pregnancy.
               </p>
   
-              <div class="testimonial__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
+              <div class="recipe-info">
+                <span><i class="fas fa-clock"></i> 20 mins</span>
+                <span><i class="fas fa-fire"></i> 340 cal</span>
+                <span><i class="fas fa-leaf"></i> Whole Grain</span>
               </div>
-            </article>
   
+              <div class="testimonial__stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span class="rating-count">(47)</span>
+              </div>
+              
+              <button class="recipe-button">View Recipe</button>
+            </article>
             
-            <article class="testimonial__card swiper-slide">
-              <img
-                src="img/recipe5.jpg"
-                alt="image"
-                class="testimonial__img"
-              />
+            <article class="testimonial__cards swiper-slide">
+              <div class="recipe-img-container">
+                <img
+                  src="img/recipe5.jpg"
+                  alt="Smoothie"
+                  class="testimonial__img"
+                />
+                <div class="recipe-tag">Vitamins</div>
+              </div>
   
-              <h2 class="testimonial__title">Grilled Chicken with Farro & Roasted
-                Cauliflower</h2>
+              <h2 class="testimonial__title">Green Ginger Smoothie</h2>
               <p class="testimonial__description">
-                Serve the chicken over the farro and vegetables. Sprinkle with
-                mint and pine nuts. Serve with lemon wedges, if desired.
+                Vitamin-packed smoothie with ginger to help with morning sickness. Quick and refreshing.
               </p>
   
-              <div class="testimonial__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
+              <div class="recipe-info">
+                <span><i class="fas fa-clock"></i> 5 mins</span>
+                <span><i class="fas fa-fire"></i> 210 cal</span>
+                <span><i class="fas fa-leaf"></i> Vegan</span>
               </div>
+  
+              <div class="testimonial__stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span class="rating-count">(31)</span>
+              </div>
+              
+              <button class="recipe-button">View Recipe</button>
+            </article>
+            
+            <!-- New Recipe 1 -->
+            <article class="testimonial__cards swiper-slide">
+              <div class="recipe-img-container">
+                <img
+                  src="img/recipe-avocado-toast.jpg"
+                  alt="Avocado Toast"
+                  class="testimonial__img"
+                />
+                <div class="recipe-tag">Folate-Rich</div>
+              </div>
+  
+              <h2 class="testimonial__title">Avocado Toast with Poached Egg</h2>
+              <p class="testimonial__description">
+                Nutrient-dense breakfast with folate-rich avocado and protein-packed eggs for healthy development.
+              </p>
+  
+              <div class="recipe-info">
+                <span><i class="fas fa-clock"></i> 12 mins</span>
+                <span><i class="fas fa-fire"></i> 320 cal</span>
+                <span><i class="fas fa-leaf"></i> Breakfast</span>
+              </div>
+  
+              <div class="testimonial__stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span class="rating-count">(64)</span>
+              </div>
+              
+              <button class="recipe-button">View Recipe</button>
+            </article>
+            
+            <!-- New Recipe 2 -->
+            <article class="testimonial__cards swiper-slide">
+              <div class="recipe-img-container">
+                <img
+                  src="img/recipe-lentil-soup.jpg"
+                  alt="Lentil Soup"
+                  class="testimonial__img"
+                />
+                <div class="recipe-tag">Plant Protein</div>
+              </div>
+  
+              <h2 class="testimonial__title">Hearty Lentil & Vegetable Soup</h2>
+              <p class="testimonial__description">
+                Iron and protein-rich lentils in a comforting soup. Perfect for boosting energy during pregnancy.
+              </p>
+  
+              <div class="recipe-info">
+                <span><i class="fas fa-clock"></i> 40 mins</span>
+                <span><i class="fas fa-fire"></i> 280 cal</span>
+                <span><i class="fas fa-leaf"></i> Plant-Based</span>
+              </div>
+  
+              <div class="testimonial__stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span class="rating-count">(42)</span>
+              </div>
+              
+              <button class="recipe-button">View Recipe</button>
+            </article>
+            
+            <!-- New Recipe 3 -->
+            <article class="testimonial__cards swiper-slide">
+              <div class="recipe-img-container">
+                <img
+                  src="img/recipe-yogurt-bowl.jpg"
+                  alt="Yogurt Bowl"
+                  class="testimonial__img"
+                />
+                <div class="recipe-tag">Calcium</div>
+              </div>
+  
+              <h2 class="testimonial__title">Greek Yogurt Breakfast Bowl</h2>
+              <p class="testimonial__description">
+                Calcium-rich Greek yogurt with berries, honey and nuts. Supports bone development for you and baby.
+              </p>
+  
+              <div class="recipe-info">
+                <span><i class="fas fa-clock"></i> 8 mins</span>
+                <span><i class="fas fa-fire"></i> 310 cal</span>
+                <span><i class="fas fa-leaf"></i> Probiotic</span>
+              </div>
+  
+              <div class="testimonial__stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span class="rating-count">(53)</span>
+              </div>
+              
+              <button class="recipe-button">View Recipe</button>
             </article>
   
           </div>
         </div>
       </div>
+      
+      <!-- Add recipe card styling -->
+      <style>
+        /* Recipe Card Styling */
+        .testimonial__cards {
+          background: white;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          padding-bottom: 20px;
+          margin: 15px 5px;
+        }
+        
+        .testimonial__cards:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        /* Recipe Image Container */
+        .recipe-img-container {
+          position: relative;
+          overflow: hidden;
+          height: 200px;
+        }
+        
+        .testimonial__img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.5s ease;
+        }
+        
+        .testimonial__cards:hover .testimonial__img {
+          transform: scale(1.1);
+        }
+        
+        /* Recipe Tag */
+        .recipe-tag {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          background: linear-gradient(45deg, #ff6b8b, #ff4081);
+          color: white;
+          padding: 5px 10px;
+          border-radius: 20px;
+          font-size: 12px;
+          font-weight: 600;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* Recipe Title */
+        .testimonial__title {
+          font-size: 18px;
+          font-weight: 600;
+          padding: 0 15px;
+          margin: 15px 0 10px;
+          color: #333;
+          height: 50px;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        
+        /* Recipe Description */
+        .testimonial__description {
+          font-size: 14px;
+          color: #666;
+          padding: 0 15px;
+          margin-bottom: 15px;
+          height: 60px;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        
+        /* Recipe Info */
+        .recipe-info {
+          display: flex;
+          justify-content: space-between;
+          padding: 0 15px;
+          margin-bottom: 15px;
+          font-size: 12px;
+          color: #777;
+        }
+        
+        .recipe-info span {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+        
+        .recipe-info i {
+          color: #ff4081;
+        }
+        
+        /* Stars Rating */
+        .testimonial__stars {
+          padding: 0 15px;
+          margin-bottom: 15px;
+          color: #ffb400;
+          display: flex;
+          align-items: center;
+        }
+        
+        .rating-count {
+          color: #999;
+          font-size: 12px;
+          margin-left: 5px;
+        }
+        
+        /* Recipe Button */
+        .recipe-button {
+          background: linear-gradient(45deg, #ff6b8b, #ff4081);
+          color: white;
+          border: none;
+          padding: 8px 15px;
+          border-radius: 25px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          display: block;
+          width: 80%;
+          margin: 0 auto;
+          box-shadow: 0 4px 10px rgba(255,75,107,0.3);
+        }
+        
+        .recipe-button:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 7px 15px rgba(255,75,107,0.4);
+        }
+        
+        .recipe-button:active {
+          transform: translateY(-1px);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+          .recipe-img-container {
+            height: 160px;
+          }
+          
+          .testimonial__title {
+            font-size: 16px;
+            height: 45px;
+          }
+          
+          .testimonial__description {
+            font-size: 13px;
+            height: 55px;
+          }
+        }
+      </style>
+      
       <br /><br />
       <br /><br />
     </div>
@@ -270,65 +865,209 @@
   </div>
   <div class="video__container container">
     <h3 class="section__title">Pregnancy Pain Videos</h3>
+    <p class="section__subtitle">Helpful exercises and techniques to relieve common pregnancy discomforts</p>
     <div class="testimonial__container container">
       <div class="testimonial__swiper swiper">
         <div class="swiper-wrapper">
   
-          <article class="video__card swiper-slide">
-            <iframe class="video__iframe" src="https://www.youtube.com/embed/ATsZ5O_6VFs"
-              title="Pregnancy Pain Relief 1" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+          <article class="testimonial__cards swiper-slide">
+            <div class="video-img-container">
+              <iframe class="video__iframe" src="https://www.youtube.com/embed/ATsZ5O_6VFs"
+                title="Pregnancy Pain Relief 1" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+              <div class="video-tag">Back Pain</div>
+            </div>
   
-            <h2 class="video__title">Pregnancy Pain Relief 1</h2>
-            <p class="video__description">
-              Learn effective ways to relieve common pregnancy pains and stay comfortable.
+            <h2 class="testimonial__title">Lower Back Pain Relief</h2>
+            <p class="testimonial__description">
+              Learn effective ways to relieve common pregnancy pains and stay comfortable throughout your journey.
             </p>
-            <a href="https://www.youtube.com/watch?v=ATsZ5O_6VFs" target="_blank" class="video__link">Watch Video</a>
+            
+            <div class="video-info">
+              <span><i class="fas fa-clock"></i> 8 mins</span>
+              <span><i class="fas fa-level-up-alt"></i> Beginner</span>
+              <span><i class="fas fa-thumbs-up"></i> Safe</span>
+            </div>
+            
+            <div class="testimonial__stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span class="rating-count">(58)</span>
+            </div>
+            
+            <a href="https://www.youtube.com/watch?v=ATsZ5O_6VFs" target="_blank" class="recipe-button">Watch Video</a>
           </article>
   
-          <article class="video__card swiper-slide">
-            <iframe class="video__iframe" src="https://www.youtube.com/embed/dt4PbyVy8Bg"
-              title="Pregnancy Pain Relief 2" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+          <article class="testimonial__cards swiper-slide">
+            <div class="video-img-container">
+              <iframe class="video__iframe" src="https://www.youtube.com/embed/dt4PbyVy8Bg"
+                title="Pregnancy Pain Relief 2" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+              <div class="video-tag">Hip Pain</div>
+            </div>
   
-            <h2 class="video__title">Pregnancy Pain Relief 2</h2>
-            <p class="video__description">
-              More techniques to ease body discomfort during pregnancy.
+            <h2 class="testimonial__title">Hip & Pelvic Relief Stretches</h2>
+            <p class="testimonial__description">
+              Gentle stretches and movements to ease hip and pelvic discomfort during pregnancy.
             </p>
-            <a href="https://www.youtube.com/watch?v=dt4PbyVy8Bg" target="_blank" class="video__link">Watch Video</a>
+            
+            <div class="video-info">
+              <span><i class="fas fa-clock"></i> 12 mins</span>
+              <span><i class="fas fa-level-up-alt"></i> Moderate</span>
+              <span><i class="fas fa-thumbs-up"></i> Safe</span>
+            </div>
+            
+            <div class="testimonial__stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="rating-count">(74)</span>
+            </div>
+            
+            <a href="https://www.youtube.com/watch?v=dt4PbyVy8Bg" target="_blank" class="recipe-button">Watch Video</a>
           </article>
   
-          <article class="video__card swiper-slide">
-            <iframe class="video__iframe" src="https://www.youtube.com/embed/l-7CHaNdn20"
-              title="Pregnancy Pain Relief 3" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+          <article class="testimonial__cards swiper-slide">
+            <div class="video-img-container">
+              <iframe class="video__iframe" src="https://www.youtube.com/embed/l-7CHaNdn20"
+                title="Pregnancy Pain Relief 3" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+              <div class="video-tag">Sciatic Pain</div>
+            </div>
   
-            <h2 class="video__title">Pregnancy Pain Relief 3</h2>
-            <p class="video__description">
-              Quick tips and stretches to ease back and hip pain.
+            <h2 class="testimonial__title">Sciatic Nerve Pain Relief</h2>
+            <p class="testimonial__description">
+              Quick and effective exercises to relieve sciatic nerve pain commonly experienced during pregnancy.
             </p>
-            <a href="https://www.youtube.com/watch?v=l-7CHaNdn20" target="_blank" class="video__link">Watch Video</a>
+            
+            <div class="video-info">
+              <span><i class="fas fa-clock"></i> 10 mins</span>
+              <span><i class="fas fa-level-up-alt"></i> Beginner</span>
+              <span><i class="fas fa-thumbs-up"></i> Safe</span>
+            </div>
+            
+            <div class="testimonial__stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span class="rating-count">(49)</span>
+            </div>
+            
+            <a href="https://www.youtube.com/watch?v=l-7CHaNdn20" target="_blank" class="recipe-button">Watch Video</a>
           </article>
   
-          <article class="video__card swiper-slide">
-            <iframe class="video__iframe" src="https://www.youtube.com/embed/S3xXurLpfDk"
-              title="Pregnancy Pain Relief 4" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+          <article class="testimonial__cards swiper-slide">
+            <div class="video-img-container">
+              <iframe class="video__iframe" src="https://www.youtube.com/embed/S3xXurLpfDk"
+                title="Pregnancy Pain Relief 4" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+              <div class="video-tag">Relaxation</div>
+            </div>
   
-            <h2 class="video__title">Pregnancy Pain Relief 4</h2>
-            <p class="video__description">
-              Discover natural remedies to alleviate pregnancy discomfort.
+            <h2 class="testimonial__title">Relaxation & Stress Relief</h2>
+            <p class="testimonial__description">
+              Gentle meditation and breathing techniques to reduce stress and promote overall comfort during pregnancy.
             </p>
-            <a href="https://www.youtube.com/watch?v=S3xXurLpfDk" target="_blank" class="video__link">Watch Video</a>
+            
+            <div class="video-info">
+              <span><i class="fas fa-clock"></i> 15 mins</span>
+              <span><i class="fas fa-level-up-alt"></i> All Levels</span>
+              <span><i class="fas fa-thumbs-up"></i> Safe</span>
+            </div>
+            
+            <div class="testimonial__stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="rating-count">(83)</span>
+            </div>
+            
+            <a href="https://www.youtube.com/watch?v=S3xXurLpfDk" target="_blank" class="recipe-button">Watch Video</a>
           </article>
   
         </div>
       </div>
     </div>
+    
+    <!-- Add video card styling -->
+    <style>
+      /* Video specific styling */
+      .video-img-container {
+        position: relative;
+        overflow: hidden;
+        height: 200px;
+        border-radius: 8px 8px 0 0;
+      }
+      
+      .video__iframe {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.3s ease;
+      }
+      
+      .testimonial__cards:hover .video__iframe {
+        transform: scale(1.02);
+      }
+      
+      /* Video Tag */
+      .video-tag {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: linear-gradient(45deg, #42a5f5, #2196f3);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      
+      /* Video Info */
+      .video-info {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px;
+        margin-bottom: 15px;
+        font-size: 12px;
+        color: #777;
+      }
+      
+      .video-info span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      
+      .video-info i {
+        color: #2196f3;
+      }
+      
+      /* Section subtitle */
+      .section__subtitle {
+        text-align: center;
+        font-size: 1rem;
+        color: var(--text-color);
+        margin-bottom: 2rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
   </div>
   
  

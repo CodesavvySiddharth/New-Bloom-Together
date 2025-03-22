@@ -8,11 +8,13 @@
           <div class="featured__swiper swiper">
             <div class="swiper-wrapper">
               <article class="featured__card swiper-slide">
-                <img
-                  src="img/book1.jpg"
-                  alt="image"
-                  class="featured__img"
-                />
+                <div class="featured__img-container">
+                  <img
+                    src="img/book1.jpg"
+                    alt="image"
+                    class="featured__img"
+                  />
+                </div>
   
                 <h2 class="featured__title">The King's Delight</h2>
                 <div class="featured__prices">
@@ -29,8 +31,8 @@
   
           // Attach click event listener to the button
           readPdfButton.addEventListener('click', function() {
-              // Replace 'path_to_your_pdf_file.pdf' with the actual path to your PDF file
-              var pdfUrl = 'PDFs/ww.pdf';
+              // Add the Bloom_Together base URL prefix to the path
+              var pdfUrl = '/Bloom_Together/PDFs/The King.pdf';
   
               // Open PDF in a new window
               window.open(pdfUrl, '_blank');
@@ -46,11 +48,13 @@
               </article>
   
               <article class="featured__card swiper-slide">
-                <img
-                  src="img/book2.jpg"
-                  alt="image"
-                  class="featured__img"
-                />
+                <div class="featured__img-container">
+                  <img
+                    src="img/book2.jpg"
+                    alt="image"
+                    class="featured__img"
+                  />
+                </div>
   
                 <h2 class="featured__title">Love is a message</h2>
                 <div class="featured__prices">
@@ -69,8 +73,8 @@
   
           // Attach click event listener to the button
           readPdfButton.addEventListener('click', function() {
-              // Replace 'path_to_your_pdf_file.pdf' with the actual path to your PDF file
-              var pdfUrl = 'PDFs/The_no_Cry_Sleep_Solution_pdf_compressed.pdf';
+              // Add the Bloom_Together base URL prefix to the path
+              var pdfUrl = '/Bloom_Together/PDFs/cry.pdf';
   
               // Open PDF in a new window
               window.open(pdfUrl, '_blank');
@@ -85,11 +89,13 @@
               </article>
 
               <article class="featured__card swiper-slide">
-                <img
-                  src="img/book4.jpg"
-                  alt="image"
-                  class="featured__img"
-                />
+                <div class="featured__img-container">
+                  <img
+                    src="img/book4.jpg"
+                    alt="image"
+                    class="featured__img"
+                  />
+                </div>
   
                 <h2 class="featured__title">Bisexual Disaster</h2>
                 <div class="featured__prices">
@@ -98,6 +104,16 @@
                 </div>
   
                 <button class="button" id="readpdf4">Read Me</button>
+                <script>
+                  document.addEventListener('DOMContentLoaded', function() {
+                    var readPdfButton = document.getElementById('readpdf4');
+                    readPdfButton.addEventListener('click', function() {
+                      // Add the Bloom_Together base URL prefix to the path
+                      var pdfUrl = '/Bloom_Together/PDFs/thb.pdf';
+                      window.open(pdfUrl, '_blank');
+                    });
+                  });
+                </script>
                 <div class="featured__actions">
                   <button><i class="ri-search-line"></i></button>
                   <button><i class="ri-heart-3-line"></i></button>
@@ -106,11 +122,13 @@
               </article>
   
               <article class="featured__card swiper-slide">
-                <img
-                  src="img/book3.jpg"
-                  alt="image"
-                  class="featured__img"
-                />
+                <div class="featured__img-container">
+                  <img
+                    src="img/book3.jpg"
+                    alt="image"
+                    class="featured__img"
+                  />
+                </div>
   
                 <h2 class="featured__title">Our gay history</h2>
                 <div class="featured__prices">
@@ -118,6 +136,16 @@
                 </div>
   
                 <button class="button" id="readpdf3">Read Me</button>
+                <script>
+                  document.addEventListener('DOMContentLoaded', function() {
+                    var readPdfButton = document.getElementById('readpdf3');
+                    readPdfButton.addEventListener('click', function() {
+                      // Add the Bloom_Together base URL prefix to the path
+                      var pdfUrl = '/Bloom_Together/PDFs/cribsheet.pdf';
+                      window.open(pdfUrl, '_blank');
+                    });
+                  });
+                </script>
                 <div class="featured__actions">
                   <button><i class="ri-search-line"></i></button>
                   <button><i class="ri-heart-3-line"></i></button>
@@ -146,8 +174,10 @@
       <div class="swiper-wrapper">
 
         <!-- Exercise 1 -->
-        <article class="testimonial__card swiper-slide">
-          <img src="img/exercise1.jpg" alt="image" class="testimonial__img" />
+        <article class="testimonial__card swiper-slide animate-card">
+          <div class="testimonial__image-wrapper">
+            <img src="img/exercise1.jpg" alt="image" class="testimonial__img" />
+          </div>
           <h2 class="testimonial__title">🏋️‍♂️ Prenatal Yoga for Strength & Relaxation</h2>
           <p class="testimonial__description">
             A gentle yet effective yoga routine for LGBTQ+ parents-to-be, promoting flexibility, stress relief, and core strength.
@@ -162,8 +192,10 @@
         </article>
 
         <!-- Exercise 2 -->
-        <article class="testimonial__card swiper-slide">
-          <img src="img/exercise2.jpg" alt="image" class="testimonial__img" />
+        <article class="testimonial__card swiper-slide animate-card">
+          <div class="testimonial__image-wrapper">
+            <img src="img/exercise2.jpg" alt="image" class="testimonial__img" />
+          </div>
           <h2 class="testimonial__title">🚶‍♂️ Low-Impact Cardio for LGBTQ+ Parents</h2>
           <p class="testimonial__description">
             Maintain a healthy heart and energy levels with beginner-friendly cardio workouts tailored for pregnancy and postpartum recovery.
@@ -178,8 +210,10 @@
         </article>
 
         <!-- Exercise 3 -->
-        <article class="testimonial__card swiper-slide">
-          <img src="img/exercise3.jpg" alt="image" class="testimonial__img" />
+        <article class="testimonial__card swiper-slide animate-card">
+          <div class="testimonial__image-wrapper">
+            <img src="img/exercise3.jpg" alt="image" class="testimonial__img" />
+          </div>
           <h2 class="testimonial__title">🏳️‍🌈 LGBTQ+ Postpartum Fitness</h2>
           <p class="testimonial__description">
             Rebuild strength and stamina after birth with safe and effective workouts designed for queer and trans parents.
@@ -194,8 +228,10 @@
         </article>
 
         <!-- Exercise 4 -->
-        <article class="testimonial__card swiper-slide">
-          <img src="img/exercise4.jpg" alt="image" class="testimonial__img" />
+        <article class="testimonial__card swiper-slide animate-card">
+          <div class="testimonial__image-wrapper">
+            <img src="img/exercise4.jpg" alt="image" class="testimonial__img" />
+          </div>
           <h2 class="testimonial__title">🧘‍♀️ Breathwork & Meditation for LGBTQ+ Parents</h2>
           <p class="testimonial__description">
             Reduce anxiety and connect with your body using guided breathwork and mindfulness exercises for LGBTQ+ parents.
@@ -210,8 +246,10 @@
         </article>
 
         <!-- Exercise 5 -->
-        <article class="testimonial__card swiper-slide">
-          <img src="img/exercise2.jpg" alt="image" class="testimonial__img" />
+        <article class="testimonial__card swiper-slide animate-card">
+          <div class="testimonial__image-wrapper">
+            <img src="img/exercise2.jpg" alt="image" class="testimonial__img" />
+          </div>
           <h2 class="testimonial__title">🏋️‍♀️ Strength Training for Trans & Non-Binary Parents</h2>
           <p class="testimonial__description">
             Safe and effective strength-building exercises designed for transmasc, transfem, and non-binary parents in their fitness journey.

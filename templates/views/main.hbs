@@ -8,10 +8,12 @@
     <!--=============== FAVICON ===============-->
     <link rel="shortcut icon" href="img\WhatsApp Image 2025-02-22 at 03.57.21.png" type="image/x-icon" />
 
+    <!-- Link to FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <title>Vertical Split Page</title>
+    <title>Bloom Together - Choose Your Journey</title>
     <!-- Link to Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Reset default margins */
         body, html {
@@ -26,7 +28,8 @@
         body {
             opacity: 0;
             transform: scale(1.05);
-            animation: fadeInZoom 2s ease-out forwards;
+            animation: fadeInZoom 1.5s ease-out forwards;
+            background-color: #f9f9f9;
         }
 
         @keyframes fadeInZoom {
@@ -53,7 +56,29 @@
             z-index: 2;
             width: 100%;
             pointer-events: none;
-            animation: slideDownFromTop 2s ease-out forwards;
+            animation: slideDownFromTop 1.5s ease-out forwards;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            position: absolute;
+            top: 85px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            width: 80%;
+            max-width: 700px;
+            pointer-events: none;
+            opacity: 0;
+            animation: fadeIn 2s ease-out 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
 
         /* Slide down from top animation */
@@ -86,6 +111,12 @@
             overflow: hidden;
             background-size: cover;
             background-position: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1) inset;
+        }
+
+        /* Hover effect for sections */
+        .section:hover {
+            flex: 1.2;
         }
 
         /* Women Section with Linear Gradient */
@@ -148,8 +179,8 @@
 <body>
 
     <!-- Title -->
-    <div class="title">CHOOSE YOUR PREFERENCE</div>
-
+     <div class="title">CHOOSE YOUR JOURNEY</div>
+   
     <div class="container">
         <!-- Women Section -->
         <div class="section women-section">

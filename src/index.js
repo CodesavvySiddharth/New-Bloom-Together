@@ -15,12 +15,28 @@ const baseUrl = "/Bloom_Together";
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Serve static files from both root and baseUrl paths
+app.use(express.static(static_path));
 app.use(baseUrl, express.static(static_path));
 
 app.set("view engine", "hbs");
 app.set("views", views_path);
 hbs.registerPartials(partials_path);
 
+// Root routes for Vercel deployment
+app.get("/", (req, res) => {
+    res.render("main");
+});
+
+app.get("/women", (req, res) => {
+    res.render("index");
+});
+
+app.get("/lgbtq", (req, res) => {
+    res.render("Lindex");
+});
+
+// Original baseUrl routes
 app.get(`${baseUrl}/`, (req, res) => {
     res.render("main");
 });
@@ -33,7 +49,16 @@ app.get(`${baseUrl}/lgbtq`, (req, res) => {
     res.render("Lindex");
 });
 
-app.post(`${baseUrl}/appointment`, async (req, res) => {
+// Handle both root and baseUrl for appointments
+app.post(`${baseUrl}/appointment`, handleAppointment);
+app.post("/appointment", handleAppointment);
+
+// Handle both root and baseUrl for subscriptions
+app.post(`${baseUrl}/subscribe`, handleSubscription);
+app.post("/subscribe", handleSubscription);
+
+// Appointment handler function
+async function handleAppointment(req, res) {
     try {
         const { name, number, email, time, messages, source } = req.body;
 
@@ -61,26 +86,32 @@ app.post(`${baseUrl}/appointment`, async (req, res) => {
         console.error(error);
         res.status(500).send("Internal Server Error");
     }
-});
+}
 
-// Subscription Route
-app.post(`${baseUrl}/subscribe`, (req, res) => {
+// Subscription handler function
+function handleSubscription(req, res) {
     const { email } = req.body;
 
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-            user: "", // Your Gmail address
-            pass: "", // Your Gmail password
+            user: process.env.EMAIL_USER || "", // Your Gmail address from env
+            pass: process.env.EMAIL_PASS || "", // Your Gmail password from env
         },
     });
 
     const mailOptions = {
-        from: "",
+        from: process.env.EMAIL_USER || "",
         to: email,
         subject: "Subscription Confirmation",
         text: "Thank you for subscribing to our newsletter!",
     };
+
+    // Skip sending email if credentials are not provided
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+        console.log("Email credentials not provided, skipping email send");
+        return res.sendStatus(200);
+    }
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
@@ -91,9 +122,10 @@ app.post(`${baseUrl}/subscribe`, (req, res) => {
             res.sendStatus(200);
         }
     });
-});
+}
 
 // Start Server
 app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}${baseUrl}`);
+    console.log(`Server is running at http://localhost:${port}`);
+    console.log(`Also available at http://localhost:${port}${baseUrl}`);
 });

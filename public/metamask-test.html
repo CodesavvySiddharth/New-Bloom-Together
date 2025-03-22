@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaMask Authentication Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #f6851b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #e2761b;
+        }
+        #status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>MetaMask Authentication Test</h1>
+    
+    <div class="container">
+        <h2>Your Address: <span id="address">Not connected</span></h2>
+        <button id="connect" class="button">Connect MetaMask</button>
+    </div>
+    
+    <div class="container">
+        <h2>Sign Message</h2>
+        <input type="text" id="username" placeholder="Enter your username" style="width: 100%; padding: 8px; margin-bottom: 10px;">
+        <button id="sign" class="button">Sign Message</button>
+    </div>
+    
+    <div id="status" class="info">
+        <h3>Status</h3>
+        <p id="status-message">Please connect your MetaMask wallet to continue.</p>
+    </div>
+    
+    <div class="container">
+        <h2>Result</h2>
+        <pre id="result">No result yet</pre>
+    </div>
+    
+    <script>
+        // Elements
+        const connectBtn = document.getElementById('connect');
+        const signBtn = document.getElementById('sign');
+        const addressEl = document.getElementById('address');
+        const statusEl = document.getElementById('status');
+        const statusMessageEl = document.getElementById('status-message');
+        const resultEl = document.getElementById('result');
+        const usernameEl = document.getElementById('username');
+        
+        // Variables
+        let currentAccount = null;
+        
+        // Check if MetaMask is installed
+        async function checkMetaMaskInstalled() {
+            const isInstalled = typeof window.ethereum !== 'undefined';
+            console.log("MetaMask installed:", isInstalled);
+            
+            if (!isInstalled) {
+                setStatus('error', 'MetaMask is not installed. Please install the MetaMask browser extension.');
+                connectBtn.disabled = true;
+                signBtn.disabled = true;
+            }
+            
+            return isInstalled;
+        }
+        
+        // Connect to MetaMask
+        async function connectMetaMask() {
+            try {
+                console.log("Requesting accounts...");
+                const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                console.log("Accounts received:", accounts);
+                
+                if (accounts.length === 0) {
+                    setStatus('error', 'No accounts found. Please create an account in MetaMask.');
+                    return false;
+                }
+                
+                currentAccount = accounts[0];
+                addressEl.textContent = currentAccount;
+                setStatus('success', 'Connected to MetaMask successfully!');
+                
+                // Listen for account changes
+                window.ethereum.on('accountsChanged', handleAccountChange);
+                
+                return true;
+            } catch (error) {
+                console.error("Error connecting to MetaMask:", error);
+                setStatus('error', `Failed to connect: ${error.message}`);
+                return false;
+            }
+        }
+        
+        // Handle account changes
+        function handleAccountChange(accounts) {
+            if (accounts.length === 0) {
+                currentAccount = null;
+                addressEl.textContent = 'Not connected';
+                setStatus('info', 'MetaMask is locked or disconnected.');
+            } else if (accounts[0] !== currentAccount) {
+                currentAccount = accounts[0];
+                addressEl.textContent = currentAccount;
+                setStatus('info', 'Account changed to: ' + currentAccount);
+            }
+        }
+        
+        // Sign message
+        async function signMessage() {
+            const username = usernameEl.value.trim();
+            
+            if (!username) {
+                setStatus('error', 'Please enter a username');
+                return;
+            }
+            
+            if (!currentAccount) {
+                const connected = await connectMetaMask();
+                if (!connected) return;
+            }
+            
+            try {
+                const timestamp = Date.now();
+                const message = `Bloom Together Authentication
+Register Request
+Username: ${username}
+Address: ${currentAccount}
+Timestamp: ${timestamp}`;
+                
+                console.log("Signing message:", message);
+                
+                const signature = await window.ethereum.request({
+                    method: 'personal_sign',
+                    params: [message, currentAccount]
+                });
+                
+                const result = {
+                    address: currentAccount,
+                    username: username,
+                    timestamp: timestamp,
+                    signature: signature,
+                    message: message
+                };
+                
+                resultEl.textContent = JSON.stringify(result, null, 2);
+                setStatus('success', 'Message signed successfully!');
+                
+                // On a real app, you would send this to your server
+                console.log("Authentication data:", result);
+            } catch (error) {
+                console.error("Error signing message:", error);
+                setStatus('error', `Failed to sign message: ${error.message}`);
+            }
+        }
+        
+        // Set status message
+        function setStatus(type, message) {
+            statusEl.className = type;
+            statusMessageEl.textContent = message;
+        }
+        
+        // Event listeners
+        connectBtn.addEventListener('click', connectMetaMask);
+        signBtn.addEventListener('click', signMessage);
+        
+        // Initialize
+        checkMetaMaskInstalled();
+    </script>
+</body>
+</html> 

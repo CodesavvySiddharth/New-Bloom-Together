@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fix MetaMask Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #f6851b;
+            border-bottom: 2px solid #f6851b;
+            padding-bottom: 10px;
+        }
+        .log {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+        .log p {
+            margin: 5px 0;
+            padding: 2px 0;
+        }
+        .log .success {
+            color: #28a745;
+        }
+        .log .warning {
+            color: #ffc107;
+        }
+        .log .error {
+            color: #dc3545;
+        }
+        .log .info {
+            color: #17a2b8;
+        }
+        .button {
+            background-color: #f6851b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .button:hover {
+            background-color: #e2761b;
+        }
+        .status {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .status.success {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        .status.error {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        #metamask-icon {
+            width: 60px;
+            height: auto;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <svg id="metamask-icon" xmlns="http://www.w3.org/2000/svg" width="35" height="33" viewBox="0 0 35 33" fill="none">
+                <path d="M32.9583 1L19.8242 10.7183L22.2666 4.99099L32.9583 1Z" fill="#E17726" stroke="#E17726" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2.04167 1L15.0256 10.809L12.7333 4.99095L2.04167 1Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M28.2648 23.6835L24.7864 29.0761L32.2396 31.1705L34.3608 23.8006L28.2648 23.6835Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M0.660095 23.8006L2.76969 31.1705L10.2135 29.0761L6.7445 23.6835L0.660095 23.8006Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.83242 14.5149L7.80505 17.6507L15.1579 17.9901L14.9247 10.0186L9.83242 14.5149Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M25.1676 14.5149L20.0081 9.92822L19.8242 17.9901L27.1949 17.6507L25.1676 14.5149Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.2135 29.0761L14.7333 26.88L10.8625 23.8496L10.2135 29.0761Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.2666 26.88L24.7864 29.0761L24.1374 23.8496L20.2666 26.88Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M24.7864 29.0761L20.2666 26.88L20.6331 29.8009L20.5919 31.0802L24.7864 29.0761Z" fill="#D5BFB2" stroke="#D5BFB2" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.2135 29.0761L14.408 31.0802L14.3762 29.8009L14.7333 26.88L10.2135 29.0761Z" fill="#D5BFB2" stroke="#D5BFB2" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14.4909 21.9958L10.7666 20.8825L13.3852 19.6621L14.4909 21.9958Z" fill="#233447" stroke="#233447" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.5091 21.9958L21.6148 19.6621L24.2429 20.8825L20.5091 21.9958Z" fill="#233447" stroke="#233447" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.2135 29.0761L10.8954 23.6835L6.74454 23.8006L10.2135 29.0761Z" fill="#CC6228" stroke="#CC6228" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M24.1045 23.6835L24.7864 29.0761L28.2648 23.8006L24.1045 23.6835Z" fill="#CC6228" stroke="#CC6228" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M27.1949 17.6507L19.8242 17.9901L20.5091 21.9958L21.6148 19.6621L24.2429 20.8825L27.1949 17.6507Z" fill="#CC6228" stroke="#CC6228" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.7666 20.8825L13.3852 19.6621L14.4909 21.9958L15.1758 17.9901L7.80505 17.6507L10.7666 20.8825Z" fill="#CC6228" stroke="#CC6228" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.80505 17.6507L10.8625 23.8496L10.7666 20.8825L7.80505 17.6507Z" fill="#E27525" stroke="#E27525" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M24.2429 20.8825L24.1374 23.8496L27.1949 17.6507L24.2429 20.8825Z" fill="#E27525" stroke="#E27525" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15.1759 17.9901L14.4909 21.9958L15.347 26.4919L15.5515 20.5431L15.1759 17.9901Z" fill="#E27525" stroke="#E27525" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19.8242 17.9901L19.458 20.5332L19.6529 26.4919L20.5091 21.9958L19.8242 17.9901Z" fill="#E27525" stroke="#E27525" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.5091 21.9958L19.653 26.4919L20.2666 26.88L24.1374 23.8496L24.2429 20.8825L20.5091 21.9958Z" fill="#F5841F" stroke="#F5841F" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.7666 20.8825L10.8625 23.8496L14.7333 26.88L15.347 26.4919L14.4909 21.9958L10.7666 20.8825Z" fill="#F5841F" stroke="#F5841F" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.5919 31.0802L20.6331 29.8009L20.297 29.5196H14.7029L14.3762 29.8009L14.408 31.0802L10.2135 29.0761L11.6206 30.2082L14.6508 32.2124H20.3394L23.379 30.2082L24.7864 29.0761L20.5919 31.0802Z" fill="#C0AC9D" stroke="#C0AC9D" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.2666 26.88L19.653 26.4919H15.347L14.7333 26.88L14.3762 29.8009L14.7029 29.5196H20.297L20.6331 29.8009L20.2666 26.88Z" fill="#161616" stroke="#161616" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M33.5247 11.3532L34.625 5.97825L32.9583 1L20.2666 10.3496L25.1676 14.5149L32.0932 16.5191L33.6138 14.7324L32.9749 14.2769L33.9745 13.3658L33.1978 12.7831L34.1975 11.9991L33.5247 11.3532Z" fill="#763E1A" stroke="#763E1A" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M0.375 5.97825L1.48463 11.3532L0.78157 11.9991L1.79084 12.7831L1.02371 13.3658L2.02336 14.2769L1.38443 14.7324L2.90502 16.5191L9.83067 14.5149L14.7333 10.3496L2.04166 1L0.375 5.97825Z" fill="#763E1A" stroke="#763E1A" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M32.0932 16.5191L25.1676 14.5149L27.1949 17.6507L24.1374 23.8496L28.2648 23.8006H34.3608L32.0932 16.5191Z" fill="#F5841F" stroke="#F5841F" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.83067 14.5149L2.90502 16.5191L0.660095 23.8006H6.7445L10.8625 23.8496L7.80505 17.6507L9.83067 14.5149Z" fill="#F5841F" stroke="#F5841F" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19.8242 17.9901L20.2666 10.3496L22.2666 4.99097H12.7333L14.7333 10.3496L15.1758 17.9901L15.3376 20.5529L15.347 26.4919H19.653L19.6623 20.5529L19.8242 17.9901Z" fill="#F5841F" stroke="#F5841F" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            MetaMask Fix Tool
+        </h1>
+        <p>This tool will help fix your MetaMask login issues by ensuring your address is properly registered in the database.</p>
+        <p>Your MetaMask address: <strong>0xdad3cdc8137b937377b259f24ad218a07731d9b0</strong></p>
+        
+        <div id="status-container" class="status">
+            Running automatic registration...
+        </div>
+        
+        <div class="log" id="log">
+            <p class="info">Starting the MetaMask fix tool...</p>
+        </div>
+        
+        <button id="manual-fix-btn" class="button">Run Manual Fix</button>
+        <button id="check-status-btn" class="button">Check Login Status</button>
+        <button id="go-home-btn" class="button">Go to Homepage</button>
+    </div>
+
+    <script type="module" src="/js/ensure-address-registered.js"></script>
+    <script>
+        // Custom logging to display in the UI
+        const logElement = document.getElementById('log');
+        const statusContainer = document.getElementById('status-container');
+        const originalConsoleLog = console.log;
+        const originalConsoleError = console.error;
+        
+        // Override console methods to show in UI
+        console.log = function(...args) {
+            originalConsoleLog.apply(console, args);
+            const message = args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : arg).join(' ');
+            addLogMessage(message, 'info');
+        };
+        
+        console.error = function(...args) {
+            originalConsoleError.apply(console, args);
+            const message = args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : arg).join(' ');
+            addLogMessage(message, 'error');
+        };
+        
+        function addLogMessage(message, type) {
+            const p = document.createElement('p');
+            p.className = type;
+            p.textContent = message;
+            logElement.appendChild(p);
+            logElement.scrollTop = logElement.scrollHeight;
+        }
+        
+        // Update status UI
+        function updateStatus(message, isSuccess) {
+            statusContainer.textContent = message;
+            statusContainer.className = isSuccess ? 'status success' : 'status error';
+        }
+        
+        // Event listeners
+        document.getElementById('manual-fix-btn').addEventListener('click', function() {
+            addLogMessage('Running manual registration process...', 'info');
+            if (window.ensureAddressRegistered) {
+                window.ensureAddressRegistered().then(success => {
+                    if (success) {
+                        updateStatus('Manual registration successful! You can now login.', true);
+                    } else {
+                        updateStatus('Manual registration failed. Check console for details.', false);
+                    }
+                });
+            } else {
+                updateStatus('Registration function not available yet. Please wait...', false);
+            }
+        });
+        
+        document.getElementById('check-status-btn').addEventListener('click', function() {
+            addLogMessage('Checking login status...', 'info');
+            if (window.checkLoginStatus) {
+                const status = window.checkLoginStatus();
+                addLogMessage(`Login status: ${status.isLoggedIn ? 'Logged in' : 'Not logged in'}`, 'info');
+                addLogMessage(`Auth type: ${status.authType || 'None'}`, 'info');
+                addLogMessage(`Address: ${status.storedAddress || 'None'}`, 'info');
+                
+                if (status.isLoggedIn && status.isYourAddress) {
+                    updateStatus('You are properly logged in with your MetaMask address!', true);
+                } else if (status.isLoggedIn) {
+                    updateStatus('You are logged in, but not with your expected address.', false);
+                } else {
+                    updateStatus('You are not logged in.', false);
+                }
+            } else {
+                updateStatus('Status check function not available yet. Please wait...', false);
+            }
+        });
+        
+        document.getElementById('go-home-btn').addEventListener('click', function() {
+            window.location.href = "/";
+        });
+    </script>
+</body>
+</html> 
